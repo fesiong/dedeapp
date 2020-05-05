@@ -1,0 +1,63 @@
+@import 'var.scss';
+/*主题*/
+.default-theme{
+
+}
+.network-theme{
+  .panel-title{
+    text-align: center;
+    padding-left: 20px;
+    border-bottom: none;
+    color: $primary;
+    .title-text{
+      background: #fff;
+      display: inline-block;
+      padding: 0 30rpx;
+      position:relative;
+      z-index: 1;
+    }
+    &::before{
+      content: " ";
+      display: inline-block;
+      position: absolute;
+      height: 0px;
+      border-bottom: 4px dashed $primary;
+      background-color: transparent; 
+      margin-top: -2px;
+      width: 60%;
+      top: 50%;
+      left: 20%;
+      right: 20%;
+      box-shadow: none;
+      border-radius: 0;
+    }
+  }
+  // .product-list{
+  //   background: #fff;
+  //   margin-bottom: 0;
+  //   .product-item{
+  //     .inner{
+  //       padding: 10px;
+  //     }
+  //     .product-image{
+  //       border: $border;
+  //     }
+  //   }
+  // }
+  // .article-list{
+  //   .article-item{
+  //     margin: 0;
+  //     border-bottom: $border;
+  //     &:last-child{
+  //       border-bottom: none;
+  //     }
+  //   }
+  // }
+  // .index-grid{
+  //   .grid-item{
+  //     .grid-text{
+  //       color: $secondary;
+  //     }
+  //   }
+  // }
+}

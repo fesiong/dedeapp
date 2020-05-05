@@ -1,0 +1,28 @@
+@import '../../var.scss';
+.footer{
+  .footer-text{
+    line-height: 56px;
+    font-size: 28px;
+  }
+  .footer-service{
+    padding-top: 30px;
+    padding-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+    color: #999;
+  }
+}
+.fixed-fab{
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba($primary, 0.5);
+  .fab-icon{
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+  }
+}

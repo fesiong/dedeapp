@@ -1,0 +1,19 @@
+{
+  "appid": "16420765",
+  "editor": {
+      
+  },
+  "host": "baiduboxapp",
+  "publish": {
+      "version": "0.5.0"
+  },
+  "setting": {
+      "urlCheck": false
+  },
+  "swan": {
+      "baiduboxapp": {
+          "swanJsVersion": "3.60.20",
+          "extensionJsVersion": "1.1.1"
+      }
+  }
+}

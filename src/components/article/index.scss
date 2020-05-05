@@ -1,0 +1,42 @@
+@import '../../var.scss';
+.article-list{
+  .article-item{
+    display: flex;
+    background: #fff;
+    margin: 20px 0;
+    padding: 20px;
+    &:last-child{
+      border-bottom: none;
+    }
+    .item-thumb{
+      flex-shrink: 0;
+      width: 216px;
+      height: 148px;
+      margin-left: 20px;
+      .item-thumb-info{
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .item-content{
+      flex: 1;
+      .item-content-title{
+        margin-top: 10px;
+        margin-bottom: 16px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+      }
+      .item-content-desc{
+        font-size: 24px;
+        color: #999;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        word-break:break-all;
+      }
+    }
+  }
+}

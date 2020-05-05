@@ -1,0 +1,13 @@
+@import '../../var.scss';
+.sub-categories{
+  color: $primary;
+  padding-bottom: 20px;
+  .sub-category-item{
+    color: $primary;
+    border: 1px solid $primary;
+    text-align:center;
+    margin:10px;
+    border-radius:6px;
+    padding:8px;
+  }
+}

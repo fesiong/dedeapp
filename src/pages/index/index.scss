@@ -1,0 +1,17 @@
+@import '../../var.scss';
+.index-grid{
+  background: #fff;
+  padding: 20px 0;
+  .grid-item{
+    text-align: center;
+    .grid-image{
+      padding: 10px;
+      box-sizing: border-box;
+      width: 120px;
+      height: 120px;
+    }
+    .grid-text{
+      color: $secondary;
+    }
+  }
+}

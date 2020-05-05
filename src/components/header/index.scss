@@ -1,0 +1,33 @@
+@import '../../var.scss';
+.header{
+  height: 80px;
+  padding: 10px 20px;
+  display: flex;
+  border-top: $border;
+  background-color: #fff;
+  .header-logo{
+    height: 80px;
+    width: 160px;
+    overflow: hidden;
+    .logo{
+      height: 80px;
+      width: 160px;
+    }
+  }
+  .header-text{
+    line-height: 80px;
+    color: $secondary;
+    flex: 1;
+    padding:0 20px;
+  }
+  .header-contact{
+    width: 220px;
+    .mobile-tips{
+      font-size: 24px;
+    }
+    .mobile{
+      font-size: 36px;
+      color: $primary;
+    }
+  }
+}

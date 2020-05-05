@@ -1,0 +1,135 @@
+$primary: #266AAE;
+$background: #f6f6f6;
+
+.rich-p {
+  margin-bottom: 20px;
+  word-break: break-all;
+}
+.rich-text,.rich-abbr,.rich-del,.rich-em,.rich-font,.rich-i,.rich-label,.rich-span,.rich-strike,.rich-strong,.rich-sub,.rich-sup,.rich-u,.rich-b, .rich-a{
+  display: inline;
+}
+/* pre */
+.rich-pre,.rich-code {
+  font-size: 28px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background: $background;
+  white-space: pre-wrap; 
+  word-break: break-all;
+  border-left: 2px solid #3273dc;
+}
+/* 图片 */
+.rich-img {
+  max-width: 100% !important;
+  // height: auto !important;
+}
+/* 视频 */
+.rich-video {
+  width: 100%;
+}
+/* 超链接 */
+.rich-a {
+  color: $primary;
+}
+/* 表格 */
+.rich-table {
+  table-layout: fixed; border-collapse: collapse;  display: table;
+}
+.rich-tbody{
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+.rich-head{
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+.rich-foot{
+  display: table-footer-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+.rich-td,.rich-th {
+  display: table-cell; vertical-align: inherit; padding:5px 10px; font-size:28px; border: 1px solid #e0e0e0; word-break: break-all;
+}
+.rich-th {
+  background:$background;
+  vertical-align: inherit;
+  font-weight: bold;
+  text-align: center;
+  text-align: -internal-center;
+}
+.rich-tr{
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+.rich-h1,.rich-h2,.rich-h3,.rich-h4,.rich-h5,.rich-h6 {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    font-weight: bold;
+}
+.rich-h1{
+    font-size: 2em;
+}
+.rich-h2{
+    font-size: 1.5em;
+}
+.rich-h3{
+    font-size: 1.25em;
+}
+.rich-h4{
+    font-size: 1.17em;
+}
+.rich-h5{
+    font-size: 1em;
+}
+.rich-h6{
+    font-size: 0.85em;
+}
+.rich-blockquote {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-left: 10px solid $primary;
+    border-radius: 0 4px 4px 0;
+    background-color: $background;
+}
+.rich-ul,.rich-ol {
+  list-style-type: disc;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-left: 80px;
+}
+.rich-ol{
+  list-style-type: decimal;
+}
+.rich-li{
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+.rich-abbr{
+  text-decoration: underline dotted;
+}
+.rich-b, .rich-strong, .rich-label{
+  font-weight: bold;
+}
+.rich-del, .rich-strike, .rich-s {
+  text-decoration: line-through;
+}
+.rich-em, .rich-i{
+  font-style: italic;
+}
+.rich-sub{
+    vertical-align: sub;
+    font-size: smaller;
+}
+.rich-sup{
+    vertical-align: super;
+    font-size: smaller;
+}
+.rich-u {
+  text-decoration: underline;
+}
