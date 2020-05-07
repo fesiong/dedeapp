@@ -24,7 +24,7 @@ export default class RichImage extends Component {
     
       if(width >= 355){
         this.setState({
-        //  width: "355px",
+          width: 0,
         //  height: 355*height/width
         })
       }else{
