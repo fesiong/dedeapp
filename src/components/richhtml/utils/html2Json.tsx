@@ -80,6 +80,10 @@ function html2json(html) {
                 name: name,
                 attrs: {}
             };
+            if (name === 'pre'){
+                //修复rich-text无法pre问题
+                node.name = 'code'
+            }
 
             if (bufArray.length === 0) {
                 node.index = index.toString()

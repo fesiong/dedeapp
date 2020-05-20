@@ -39,7 +39,6 @@ export default class SeoRichHtml extends Component {
   render() {
     const { fullscreen, bgColor } = this.props
     const { nodes } = this.state
-    console.log(nodes)
 
     let scontentStyle = bgColor ? ' background-color:' + bgColor + ';' : ''
     scontentStyle += !fullscreen ? 'padding:15px;' : ''
