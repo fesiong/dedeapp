@@ -202,6 +202,9 @@ function html2json(html) {
             if(name === 'tr') {
                 let single = (100/node.children.length).toFixed(5)
                 for (let item of node.children) {
+                    if (!item.attrs){
+                        item.attrs = {}
+                    }
                     item.attrs.style = 'width: '+single+'%;' + (item.attrs.style ? item.attrs.style : '')
                 }
             }
