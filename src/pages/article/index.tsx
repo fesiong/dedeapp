@@ -1,4 +1,5 @@
-import Taro, { Component, Config, getApp } from '@tarojs/taro'
+import { Component }from 'nervjs'
+import Taro, { getApp } from '@tarojs/taro'
 import { View, Image, Block, Text } from '@tarojs/components'
 import { AtTag, AtLoadMore } from 'taro-ui'
 import Container from '../../components/container'
@@ -9,10 +10,6 @@ import Api from '../../api'
 import './index.scss'
 const app = getApp()
 export default class ArticlePage extends Component {
-
-  config: Config = {
-    navigationBarTitleText: '文章详情'
-  }
 
   state = {
     fetched: !1,

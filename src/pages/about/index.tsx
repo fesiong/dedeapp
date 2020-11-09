@@ -1,4 +1,5 @@
-import Taro, { Component, Config } from '@tarojs/taro'
+import { Component }from 'nervjs'
+import Taro from '@tarojs/taro'
 import { View, Text, Image, Block } from '@tarojs/components'
 import { AtLoadMore } from 'taro-ui'
 import Container from '../../components/container'
@@ -10,10 +11,6 @@ import Api from '../../api'
 import './index.scss'
 
 export default class AboutPage extends Component {
-
-  config: Config = {
-    navigationBarTitleText: '关于我们'
-  }
 
   state = {
     swiper: [],

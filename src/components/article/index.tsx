@@ -1,7 +1,8 @@
-import Taro, { Component, getApp } from '@tarojs/taro'
+import { Component } from 'nervjs'
+import Taro, { getApp } from '@tarojs/taro'
 import { Block, View, Image } from '@tarojs/components'
 import { AtLoadMore } from 'taro-ui'
-import Empty from '../../components/empty'
+import Empty from '../empty'
 import './index.scss'
 const app = getApp()
 export default class Article extends Component {

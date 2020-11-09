@@ -1,4 +1,5 @@
-import Taro, { Component, Config } from '@tarojs/taro'
+import { Component } from 'nervjs'
+import Taro from '@tarojs/taro'
 import { Image } from '@tarojs/components'
 import './index.scss'
 

@@ -1,4 +1,5 @@
-import Taro, { Component } from '@tarojs/taro'
+import { Component } from 'nervjs'
+import Taro from '@tarojs/taro'
 import { View, Text, RichText } from '@tarojs/components'
 import RichImage from '../image'
 import SeoVideo from '../video'

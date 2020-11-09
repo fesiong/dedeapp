@@ -1,11 +1,9 @@
-import Taro, { Component, Config } from '@tarojs/taro'
+import { Component } from 'nervjs'
+import Taro from '@tarojs/taro'
 import { WebView } from '@tarojs/components'
 import './index.scss'
 
 export default class BrowserPage extends Component {
-  config: Config = {
-    navigationBarTitleText: '网页'
-  }
 
   state = {
     url: ''

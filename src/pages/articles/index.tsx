@@ -1,4 +1,5 @@
-import Taro, { Component, Config } from '@tarojs/taro'
+import { Component }from 'nervjs'
+import Taro from '@tarojs/taro'
 import { AtTabs } from 'taro-ui'
 import Container from '../../components/container'
 import Article from '../../components/article'
@@ -8,9 +9,6 @@ import Api from '../../api'
 import './index.scss'
 
 export default class ArticlesPage extends Component {
-  config: Config = {
-    navigationBarTitleText: '新闻中心'
-  }
 
   articleList = []
 

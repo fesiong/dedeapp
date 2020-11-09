@@ -1,4 +1,4 @@
-import Taro, { Component } from '@tarojs/taro'
+import { Component } from 'nervjs'
 import { View } from '@tarojs/components'
 import RichView from './view'
 import html2Json from './utils/html2Json'

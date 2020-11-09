@@ -47,7 +47,7 @@ function request(url, params, cacheKey = ''){
   })
 }
 
-export default async function fetch(url, params = {}, cache = false) {
+export default async function fetch(url, params: any = {}, cache = false) {
   params.ignoreCategory  = appConfig.ignoreCategory
   params.productModelId  = appConfig.productModelId
   params.productCategory = appConfig.productCategory

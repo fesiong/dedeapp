@@ -33,7 +33,7 @@ var fillAttrs = makeMap("checked,compact,declare,defer,disabled,ismap,multiple,n
 var special = makeMap("wxxxcode-style,script,style,view,scroll-view,block");
 
 function HTMLParser(html, handler) {
-	var index, chars, match, stack = [];
+	var index, chars, match, stack: any = {};
 	//先过滤html
 	html = xss(html, {
 		whiteList: Object.assign({
@@ -129,7 +129,7 @@ function HTMLParser(html, handler) {
 	}
 
 	// Clean up any remaining tags
-	parseEndTag();
+	parseEndTag("", "");
 
 	function parseStartTag(tag, tagName, rest, unary) {
 		tagName = tagName.toLowerCase();

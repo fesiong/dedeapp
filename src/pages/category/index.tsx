@@ -1,4 +1,5 @@
-import Taro, { Component, Config, getApp } from '@tarojs/taro'
+import { Component } from 'nervjs'
+import Taro, { getApp } from '@tarojs/taro'
 import { View, Text, Image } from '@tarojs/components'
 import { AtDivider, AtLoadMore } from 'taro-ui'
 import Container from '../../components/container'
@@ -12,10 +13,6 @@ import './index.scss'
 const app = getApp()
 
 export default class CategoryPage extends Component {
-
-  config: Config = {
-    navigationBarTitleText: '分类详情'
-  }
 
   id = 0
   page = 1

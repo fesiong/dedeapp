@@ -9,25 +9,6 @@ const config = {
   },
   sourceRoot: 'src',
   outputRoot: 'dist',
-  babel: {
-    sourceMap: true,
-    presets: [
-      ['env', {
-        modules: false
-      }]
-    ],
-    plugins: [
-      'transform-decorators-legacy',
-      'transform-class-properties',
-      'transform-object-rest-spread',
-      ['transform-runtime', {
-        'helpers': false,
-        'polyfill': false,
-        'regenerator': true,
-        'moduleName': 'babel-runtime'
-      }]
-    ]
-  },
   plugins: [],
   defineConstants: {
   },
@@ -38,6 +19,7 @@ const config = {
     options: {
     }
   },
+  framework: 'nerv',
   mini: {
     postcss: {
       pxtransform: {
@@ -61,22 +43,15 @@ const config = {
   },
   h5: {
     publicPath: '/',
-    publicPath: '/preview', //c端预览包才需要开启
     staticDirectory: 'static',
     esnextModules: ['taro-ui'],
     router: {
       mode: 'browser', // 'hash'||'browser'
-      basename: '/preview', //c端预览包才需要开启
     },
     postcss: {
       autoprefixer: {
         enable: true,
         config: {
-          browsers: [
-            'last 3 versions',
-            'Android >= 4.1',
-            'ios >= 8'
-          ]
         }
       },
       cssModules: {

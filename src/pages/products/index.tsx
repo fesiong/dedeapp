@@ -1,4 +1,5 @@
-import Taro, { Component, Config } from '@tarojs/taro'
+import { Component } from 'nervjs'
+import Taro from '@tarojs/taro'
 import { AtTabs } from 'taro-ui'
 import Container from '../../components/container'
 import Product from '../../components/product'
@@ -8,9 +9,6 @@ import Api from '../../api'
 import './index.scss'
 
 export default class ProductsPage extends Component {
-  config: Config = {
-    navigationBarTitleText: '产品中心'
-  }
 
   productList = []
 
