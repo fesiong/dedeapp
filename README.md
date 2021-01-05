@@ -29,52 +29,52 @@ dedecms网站配套百度小程序，可以直接将dedecms站点的数据传输
 
 1. 基本设置
 基本配置信息包括小程序logo、小程序名称，小程序名称显示在小程序首页顶部导航上。配置如图  
-![001](demo/001.png)  
+![001](https://raw.githubusercontent.com/fesiong/dedeapp/master/demo/001.png)  
 
 2. 首页TDK设置
 首页TDK是指标题、关键词、描述，同网站首页的TDK一致，是小程序重要指标，务必认真填写。如图  
-![002](demo/002.png)  
+![002](https://raw.githubusercontent.com/fesiong/dedeapp/master/demo/002.png)  
 
 3. 联系方式设置
 联系方式包括公司名称、公司地址、联系电话、联系微信，它们会显示在联系我们的页面里，以及各个页面的悬浮按钮。如图
-![003](demo/003.png)  
+![003](https://raw.githubusercontent.com/fesiong/dedeapp/master/demo/003.png)  
 
 4. 内容设置
 内容设置可以设置关于我们、联系我们、首页显示的分类内容、启用产品功能、停用产品功能等。  
 关于我们、联系我们需要指定单页id或分类id，优先使用单页id，只有填写了正确的id后，小程序才能正确调用关于我们和联系我们。如图  
-![004](demo/004.png)  
+![004](https://raw.githubusercontent.com/fesiong/dedeapp/master/demo/004.png)  
 小程序首页默认会显示一组分离以及分类的内容列表，正确配置首页显示的分类，可以让首页更美观以及将更有用的信息展示给用户。比如需要将培训视频、学员作品、客户案例展示在首页，他们的分类id分别是1，7，8，那么首页分类则填写1,7,8，它们之间需要使用英文的,隔开。如图  
-![005](demo/005.png)  
+![005](https://raw.githubusercontent.com/fesiong/dedeapp/master/demo/005.png)  
 
 6. 启用产品功能
 将配置中的showProduct值设置为1，如果织梦站点使用商品模块来管理产品，则productCategory不需要设置，小程序会自动调用商品模块来获取产品分类和产品详情。如图  
-![006](demo/006.png)  
+![006](https://raw.githubusercontent.com/fesiong/dedeapp/master/demo/006.png)  
 
 如果织梦站点使用文章模块来管理产品，则还需要设置productCategory的值为产品分类的顶级分类id。如图  
-![007](demo/007.png)  
+![007](https://raw.githubusercontent.com/fesiong/dedeapp/master/demo/007.png)  
 同时还需要将产品中心的导航添加上。打开app.json，找到首页，在它下方加入产品中心，如图  
-![008](demo/008.png)  
+![008](https://raw.githubusercontent.com/fesiong/dedeapp/master/demo/008.png)  
 还需要将首页导航图标反注释。打开config.js。如图  
-![009](demo/009.png)  
+![009](https://raw.githubusercontent.com/fesiong/dedeapp/master/demo/009.png)  
 
 7. 停用产品功能
 将配置中的showProduct值设置为0即可。如图  
-![010](demo/010.png)  
+![010](https://raw.githubusercontent.com/fesiong/dedeapp/master/demo/010.png)  
 同时还需要将产品中心的导航移除。打开app.json，找到产品中心代码，并将它们移除，如图  
-![011](demo/011.png)  
+![011](https://raw.githubusercontent.com/fesiong/dedeapp/master/demo/011.png)  
 还需要将首页导航图标注释。打开config.js。如图
-![012](demo/012.png)  
+![012](https://raw.githubusercontent.com/fesiong/dedeapp/master/demo/012.png)  
 
 8. 首页幻灯片设置
 配置首页幻灯片可以让小程序更突出，也可以让首屏加载更快。幻灯片同时支持在织梦后台配置，织梦后台的文档，添加幻灯属性后，即可替代config.js的配置。  
 每张幻灯片由4个字段组成，model的值可以是article或product，id的值是对应的文章或产品id，title为显示的名称，title可以不填，logo为图片地址。如图  
-![013](demo/013.png)  
+![013](https://raw.githubusercontent.com/fesiong/dedeapp/master/demo/013.png)  
 
 9. 首页导航图标设置
 
 首页导航图标可以让更重要的信息直达。建议配置不要超过5个。  
 每个图标由3个字段组成，url为小程序的链接，title为名称，logo为图片地址，尽量使用网络图片地址。如图
-![014](demo/014.png)    
+![014](https://raw.githubusercontent.com/fesiong/dedeapp/master/demo/014.png)    
 
 ## 五、sitemap的生成
 访问你的网址+/appclient.php?a=sitemap
@@ -82,8 +82,8 @@ dedecms网站配套百度小程序，可以直接将dedecms站点的数据传输
 
 ## 六、技术支持
 微信: no_reg  
-网站：[织梦小程序](https://www.taokee.top)  
+网站：[织梦小程序](https://www.kandaoni.com)  
 
 参与讨论：请添加我的微信进微信群讨论  
 
-![no_reg](https://www.taokee.top/img/qr.png)
+![no_reg](https://www.kandaoni.com/uploads/20211/5/fe4d9fbabdc70ffc.png)
