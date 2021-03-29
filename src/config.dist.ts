@@ -3,10 +3,10 @@
  */
 const appConfig = {
   /* API地址 */
-  api: 'http://www.qijianwang.net/appclient.php',
+  api: 'https://www.taokee.top/api/app',
   /* 基本配置 */
   /* 小程序logo */
-  logo: 'http://www.qijianwang.net/skin/images/logo.png',
+  logo: 'https://www.taokee.top/img/logo.png',
   /* 小程序名称 */
   title: '织梦网站小程序制作',
   /* 首页标题 */
@@ -26,19 +26,19 @@ const appConfig = {
   address: '广东深圳',
   /* 内容设置 */
   /* 关于我们的单页/分类id */
-  aboutId: '23',
+  aboutId: '1',
   /* 联系我们单页/分类id */
-  contactId: '19',
+  contactId: '2',
   /* 排除不显示的分类id，多个分类id请用英文的,隔开 */
-  ignoreCategory: '7',
+  ignoreCategory: '3,4',
   /* 是否显示产品, 1显示，0不显示 */
   showProduct: 1,
   /* 产品模型id，默认是6 */
-  productModelId: '2',
+  productModelId: '6',
   /* 产品顶级分类id， 只有在没有使用产品模型的时候需要填写 */
   productCategory: '',
   // /* 是否显示案例，1显示，0不显示 */
-  showCase: 1,
+  // showCase: 1,
   // /* 案例分类顶级id，不填写有可能不能正常显示案例 */
   // caseCategory: '9',
   /* 需要显示在首页的分类，多个分类用,隔开 */
