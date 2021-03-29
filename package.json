@@ -40,7 +40,7 @@
     "@tarojs/components": "3.1.4",
     "@tarojs/runtime": "3.1.4",
     "@tarojs/taro": "3.1.4",
-    "lodash": "4.17.15",
+    "lodash": "4.17.19",
     "nervjs": "^1.5.0",
     "taro-ui": "^3.0.0-alpha.3",
 		"xss": "^1.0.6"
