@@ -1,4 +1,4 @@
-import { Component } from 'nervjs'
+import Nerv, { Component } from 'nervjs'
 import Taro, { getCurrentPages } from '@tarojs/taro'
 
 import 'taro-ui/dist/style/components/activity-indicator.scss'
@@ -16,16 +16,6 @@ class App extends Component {
   navigate = (t) => {
     (getCurrentPages() || []).length >= 5 ? Taro.redirectTo(t) : Taro.navigateTo(t)
   }
-
-  getCache = (t) => {
-    return this.cacheData[t]
-  }
-
-  setCache = (t, a) => {
-    this.cacheData[t] = a
-  }
-
-  cacheData = {}
 
   // this.props.children 是将要会渲染的页面
   render () {

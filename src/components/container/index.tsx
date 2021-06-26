@@ -1,4 +1,4 @@
-import { Component } from 'nervjs'
+import Nerv, { Component } from 'nervjs'
 import Taro from '@tarojs/taro'
 import { View, Text } from '@tarojs/components'
 import Header from '../header'

@@ -9,10 +9,10 @@
 dedecms网站配套百度小程序，可以直接将dedecms站点的数据传输到百度小程序中，省去使用第三方小程序管理后台的烦恼，不需要重新给百度小程序再发布一遍产品和文章，节省大量的编辑工作。
 
 ## 二、安装方法  
-1. 将baiduapp.zip解压，得到appclient-0.4.3.php、dedecms-0.4.3.zip。
-2. 将appclient-0.4.3.php重命名为appclient.php，并上传到网站根目录，访问一次，如果有内容输出，表示正常。
-3. 将dedecms-0.4.3.zip解压到dedecms文件夹，并用百度开发者工具打开预览
-4. 打开dedecms根目录下的config.js，按照里面的说明和示例填写基本配置信息。（小程序的配置同样可以通过dedecms后台配置，后台配置在后台的系统设置->系统基本参数->站点设置里）。
+1. 从github的[Release](https://github.com/fesiong/dedeapp/releases) 中下载小程序代码，并解压。
+2. 从github上下载[appclient.php](https://github.com/fesiong/dedeapp/blob/master/dede/appclient.php)，并上传到网站根目录，访问一次，如果有内容输出，表示正常。
+3. 进入小程序源码，并用百度开发者工具打开预览
+4. 打开小程序源码根目录下的common.js，格式化它，并编辑对应的字段，按照里面的说明和示例填写基本配置信息。（小程序的配置同样可以通过dedecms后台配置，后台配置在后台的系统设置->系统基本参数->站点设置里）。
 5. 点击百度开发者工具->项目信息，填写appid
 6. 到百度小程序后台，添加站点域名为请求域名。
 7. 在百度开发者工具提交发布。
@@ -22,7 +22,7 @@ dedecms网站配套百度小程序，可以直接将dedecms站点的数据传输
 请自行熟悉，这里不做详细解答
 
 ## 四、小程序配置
-小程序的配置文件在小程序包的根目录下的config.js。初次安装，需要配置必要的信息，才能让小程序正常工作。如果您的织梦站点没有使用产品模块，则可能需要选择停用产品功能。同样的配置也可以通过织梦后台配置。后台的配置在：后台的系统设置->系统基本参数->站点设置 里面。一下大部分配置并不需要操作，默认即可。
+小程序的配置文件在小程序包的根目录下的common.js，格式化它。初次安装，需要配置必要的信息，才能让小程序正常工作。如果您的织梦站点没有使用产品模块，则可能需要选择停用产品功能。同样的配置也可以通过织梦后台配置。后台的配置在：后台的系统设置->系统基本参数->站点设置 里面。一下大部分配置并不需要操作，默认即可。
 
 ### 接口设置
 填写API地址：API地址由您的站点地址+appclient.php组成，例如你的站点地址是http://dev.dedecms.com，那么API地址则是http://dev.dedecms.com/appclient.php，请确保这个地址能正常访问到接口文件，接口文件的上传请参照 二、安装方法  
@@ -54,7 +54,7 @@ dedecms网站配套百度小程序，可以直接将dedecms站点的数据传输
 ![007](https://raw.githubusercontent.com/fesiong/dedeapp/master/demo/007.png)  
 同时还需要将产品中心的导航添加上。打开app.json，找到首页，在它下方加入产品中心，如图  
 ![008](https://raw.githubusercontent.com/fesiong/dedeapp/master/demo/008.png)  
-还需要将首页导航图标反注释。打开config.js。如图  
+还需要将首页导航图标反注释。打开common.js，格式化它。如图  
 ![009](https://raw.githubusercontent.com/fesiong/dedeapp/master/demo/009.png)  
 
 7. 停用产品功能
@@ -62,7 +62,7 @@ dedecms网站配套百度小程序，可以直接将dedecms站点的数据传输
 ![010](https://raw.githubusercontent.com/fesiong/dedeapp/master/demo/010.png)  
 同时还需要将产品中心的导航移除。打开app.json，找到产品中心代码，并将它们移除，如图  
 ![011](https://raw.githubusercontent.com/fesiong/dedeapp/master/demo/011.png)  
-还需要将首页导航图标注释。打开config.js。如图
+还需要将首页导航图标注释。打开common.js，格式化它。如图
 ![012](https://raw.githubusercontent.com/fesiong/dedeapp/master/demo/012.png)  
 
 8. 首页幻灯片设置

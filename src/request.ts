@@ -1,7 +1,7 @@
-import Taro, { getApp } from '@tarojs/taro'
+import Taro from '@tarojs/taro'
 import appConfig from './config'
 import Version from './version'
-const app = getApp()
+import store from './store'
 
 function crc32(a) {
   let c = function() {
@@ -37,7 +37,7 @@ function request(url, params, cacheKey = ''){
     }
 
     if(cacheKey){
-      app.setCache(cacheKey, res.data)
+      store.setCache(cacheKey, res.data)
     }
 
     return res.data
@@ -54,7 +54,7 @@ export default async function fetch(url, params: any = {}, cache = false) {
   params.showProduct     = appConfig.showProduct
   if(cache){
     let cacheKey = crc32(url + JSON.stringify(params))
-    let data = app.getCache(cacheKey)
+    let data = store.getCache(cacheKey)
     if(data){
       return data;
     }else{

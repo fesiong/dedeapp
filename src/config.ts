@@ -3,10 +3,10 @@
  */
 const appConfig = {
   /* API地址 */
-  api: 'http://www.qijianwang.net/appclient.php',
+  api: 'https://www.vanapp.cn/appclient.php',
   /* 基本配置 */
   /* 小程序logo */
-  logo: 'http://www.qijianwang.net/skin/images/logo.png',
+  logo: 'https://www.vanapp.cn/skin/images/logo.png',
   /* 小程序名称 */
   title: '织梦网站小程序制作',
   /* 首页标题 */
