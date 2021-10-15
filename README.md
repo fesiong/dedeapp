@@ -81,9 +81,7 @@ dedecms网站配套百度小程序，可以直接将dedecms站点的数据传输
 例如网址是https://www.baidu.com，那么，sitemap地址就是https://www.baidu.com/appclient.php?a=sitemap
 
 ## 六、技术支持
-微信: no_reg  
+微信: websafety  
 网站：[织梦小程序](https://www.kandaoni.com)  
 
 参与讨论：请添加我的微信进微信群讨论  
-
-![no_reg](https://www.kandaoni.com/uploads/20211/5/fe4d9fbabdc70ffc.png)
