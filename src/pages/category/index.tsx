@@ -1,5 +1,5 @@
-import Nerv, { Component } from 'nervjs'
-import Taro, { getApp } from '@tarojs/taro'
+import { Component } from 'react'
+import Taro from '@tarojs/taro'
 import { View, Text, Image } from '@tarojs/components'
 import { AtDivider, AtLoadMore } from 'taro-ui'
 import Container from '../../components/container'
@@ -9,8 +9,8 @@ import Article from '../../components/article'
 import Utils from '../../utils'
 import Api from '../../api'
 import './index.scss'
-
-const app = getApp()
+import utils from '../../utils'
+import { getCurrentInstance } from '@tarojs/runtime'
 
 export default class CategoryPage extends Component {
 
@@ -27,7 +27,8 @@ export default class CategoryPage extends Component {
   }
 
   componentWillMount() {
-    this.id = this.$router.params.id
+    let params: any = getCurrentInstance().router?.params;
+    this.id = params.id
   }
 
   componentDidMount() {
@@ -115,7 +116,7 @@ export default class CategoryPage extends Component {
   }
 
   changeCategory = (e) => {
-    app.navigate({
+    utils.navigate({
       url: '/pages/category/index?id=' + e
     })
   }

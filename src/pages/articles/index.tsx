@@ -1,4 +1,4 @@
-import Nerv, { Component }from 'nervjs'
+import React, { Component } from 'react'
 import Taro from '@tarojs/taro'
 import { AtTabs } from 'taro-ui'
 import Container from '../../components/container'
@@ -145,9 +145,9 @@ export default class ArticlesPage extends Component {
     return (
       <Container showFooter>
         <Banner list={swiper}/>
-        {categories.length && <AtTabs className={'tabs' + (fixed ? 'fixed-top' : '')} scroll current={currentId} tabList={categories} onClick={this.clickTab}>
+        {categories.length > 0 && <AtTabs className={'tabs' + (fixed ? 'fixed-top' : '')} scroll current={currentId} tabList={categories} onClick={this.clickTab}>
         </AtTabs>}
-        {currentList.list.length && <Article articles={currentList.list} loading={currentList.loading} />}
+        {currentList.list.length > 0 && <Article articles={currentList.list} loading={currentList.loading} />}
       </Container>
     )
   } a

@@ -1,4 +1,4 @@
-import Nerv, { Component } from 'nervjs'
+import React, { Component } from 'react'
 import Taro from '@tarojs/taro'
 import { Image } from '@tarojs/components'
 import './index.scss'
@@ -22,7 +22,7 @@ export default class RichImage extends Component {
   onLoad = (e) => {
     if(e.detail){
       let {width, height} = e.detail
-    
+
       if(width >= 355){
         this.setState({
           width: 0,

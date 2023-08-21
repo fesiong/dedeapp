@@ -1,10 +1,10 @@
-import Nerv, { Component } from 'nervjs'
-import Taro, { getApp } from '@tarojs/taro'
+import { Component } from 'react'
 import { Block, View, Image } from '@tarojs/components'
 import { AtLoadMore } from 'taro-ui'
 import Empty from '../empty'
 import './index.scss'
-const app = getApp()
+import utils from '@/utils'
+
 export default class Article extends Component {
   static defaultProps = {
     articles: [],
@@ -16,7 +16,7 @@ export default class Article extends Component {
   }
 
   gotoArticle = (e) => {
-    app.navigate({
+    utils.navigate({
       url: '/pages/article/index?id=' + e
     })
   }
@@ -26,7 +26,7 @@ export default class Article extends Component {
 
     return (
       <Block>
-        {articles.length && <View className='article-list'>
+        {articles.length > 0 && <View className='article-list'>
             {articles.map((item, index) => {
               return <View className='article-item' key={index} onClick={this.gotoArticle.bind(this, item.id)}>
                 <View className='item-content'>
@@ -40,7 +40,7 @@ export default class Article extends Component {
             })}
           </View>}
           {loading && <AtLoadMore status='loading' />}
-          {!articles.length && !loading && <Empty title='该分类下没有文章' />}
+          {(!articles.length && !loading) && <Empty title='该分类下没有文章' />}
       </Block>
     )
   }

@@ -1,4 +1,4 @@
-import Nerv, { Component } from 'nervjs'
+import React, { Component } from 'react'
 import { View, Text, Image } from '@tarojs/components'
 import './index.scss'
 

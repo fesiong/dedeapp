@@ -1,14 +1,16 @@
-import Nerv, { Component }from 'nervjs'
-import Taro, { getApp } from '@tarojs/taro'
-import { View, Image, Block, Text } from '@tarojs/components'
-import { AtTag, AtLoadMore } from 'taro-ui'
+import { Component } from 'react'
+import Taro from '@tarojs/taro'
+import { View, Text } from '@tarojs/components'
+import { AtLoadMore } from 'taro-ui'
 import Container from '../../components/container'
 import RichHtml from '../../components/richhtml'
 import Article from '../../components/article'
 import Utils from '../../utils'
 import Api from '../../api'
 import './index.scss'
-const app = getApp()
+import utils from '../../utils'
+import { getCurrentInstance } from '@tarojs/runtime'
+
 export default class ArticlePage extends Component {
 
   state = {
@@ -20,7 +22,8 @@ export default class ArticlePage extends Component {
   id = 0
 
   componentWillMount() {
-    this.id = this.$router.params.id
+    let params: any = getCurrentInstance().router?.params;
+    this.id = params.id
   }
 
   componentDidMount() {
@@ -71,13 +74,13 @@ export default class ArticlePage extends Component {
   }
 
   gotoCategory = (e) => {
-    app.navigate({
+    utils.navigate({
       url: '/pages/category/index?id=' + e
     })
   }
 
   gotoArticle = (e) => {
-    app.navigate({
+    utils.navigate({
       url: '/pages/article/index?id=' + e
     })
   }
@@ -118,7 +121,7 @@ export default class ArticlePage extends Component {
           <View className='panel'>
             <View className='panel-title'><Text className='title-text'>相关文章</Text></View>
             <View className='panel-content no-padding'>
-              {related.length && <Article articles={related} />}
+              {related.length > 0 && <Article articles={related} />}
             </View>
           </View>
         </View>

@@ -1,7 +1,8 @@
-import Nerv, { Component } from 'nervjs'
+import React, { Component } from 'react'
 import Taro from '@tarojs/taro'
 import { WebView } from '@tarojs/components'
 import './index.scss'
+import { getCurrentInstance } from '@tarojs/runtime'
 
 export default class BrowserPage extends Component {
 
@@ -10,8 +11,9 @@ export default class BrowserPage extends Component {
   }
 
   componentWillMount () {
+    let params: any = getCurrentInstance().router?.params;
     this.setState({
-      url: this.$router.params.url
+      url: params.url
     })
   }
 

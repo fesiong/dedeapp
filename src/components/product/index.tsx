@@ -1,9 +1,9 @@
-import Nerv, { Component } from 'nervjs'
+import { Component } from 'react'
 import { Block, View, Image } from '@tarojs/components'
 import { AtLoadMore } from 'taro-ui'
 import Empty from '../empty'
 import './index.scss'
-const app = getApp()
+import utils from '@/utils'
 export default class Product extends Component {
   static defaultProps = {
     products: [],
@@ -16,7 +16,7 @@ export default class Product extends Component {
   }
 
   gotoProduct = (e) => {
-    app.navigate({
+    utils.navigate({
       url: '/pages/product/index?id=' + e
     })
   }
@@ -26,7 +26,7 @@ export default class Product extends Component {
 
     return (
       <Block>
-        {products.length && <View className='product-list'>
+        {products.length > 0 && <View className='product-list'>
           {products.map((item, index) => {
             return <View className={'product-item column-' + column} key={index} onClick={this.gotoProduct.bind(this, item.id)}>
               <View className='inner'>

@@ -1,4 +1,4 @@
-import Nerv, { Component } from 'nervjs'
+import React, { Component } from 'react'
 import Taro from '@tarojs/taro'
 import { View, Image, Text } from '@tarojs/components'
 import { AtLoadMore } from 'taro-ui'
@@ -71,7 +71,7 @@ export default class AboutPage extends Component {
         title: '获取页面信息失败'
       })
     })
-    
+
     Api.setting().then(res => {
       this.setState({
         setting: Object.assign(setting, res.data.setting)

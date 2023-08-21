@@ -1,3 +1,6 @@
+import Taro from "@tarojs/taro"
+import { getCurrentPages } from "@tarojs/taro"
+
 function padZero(str, num = 2){
   return String(str).padStart(num, "0")
 }
@@ -16,8 +19,11 @@ const utils = {
     let date = new Date(t*1000)
     let timeStr = padZero(date.getHours()) + ":" + padZero(date.getMinutes()) + ":" + padZero(date.getSeconds())
     let dateStr = date.getFullYear() + "-" + padZero(date.getMonth()+1) + "-" + padZero(date.getDate())
-    
+
     return dateStr + " " + timeStr
+  },
+  navigate: function (t) {
+    (getCurrentPages() || []).length >= 5 ? Taro.redirectTo(t) : Taro.navigateTo(t)
   }
 }
 

@@ -1,4 +1,4 @@
-import Nerv, { Component } from 'nervjs'
+import React, { Component } from 'react'
 import Taro from '@tarojs/taro'
 import { AtTabs } from 'taro-ui'
 import Container from '../../components/container'
@@ -140,7 +140,7 @@ export default class ProductsPage extends Component {
     let { currentId } = this.state
     this.getTabProducts(currentId)
   }
-  
+
   gotoProduct = (e) => {
     Taro.navigateTo({
       url: '/pages/product/index?id=' + e
@@ -152,9 +152,9 @@ export default class ProductsPage extends Component {
     return (
       <Container showFooter>
         <Banner list={swiper}/>
-        {categories.length && <AtTabs className={'tabs' + (fixed ? 'fixed-top' : '')} scroll current={currentId} tabList={categories} onClick={this.clickTab}>
+        {categories.length > 0 && <AtTabs className={'tabs' + (fixed ? 'fixed-top' : '')} scroll current={currentId} tabList={categories} onClick={this.clickTab}>
         </AtTabs>}
-        {currentList.list.length && <Product products={currentList.list} loading={currentList.loading} />}
+        {currentList.list.length > 0 && <Product products={currentList.list} loading={currentList.loading} />}
       </Container>
     )
   }

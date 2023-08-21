@@ -1,4 +1,4 @@
-import Nerv, { Component } from 'nervjs'
+import { Component } from 'react'
 import { View } from '@tarojs/components'
 import RichView from './view'
 import html2Json from './utils/html2Json'
@@ -41,7 +41,7 @@ export default class SeoRichHtml extends Component {
     const { nodes } = this.state
 
     let scontentStyle = bgColor ? ' background-color:' + bgColor + ';' : ''
-    scontentStyle += !fullscreen ? 'padding:15px;' : ''
+    scontentStyle += !fullscreen ? 'padding:5px;' : ''
     return <View style={scontentStyle}><RichView nodes={nodes} /></View>
   }
 }

@@ -1,4 +1,4 @@
-import { Component }from 'nervjs'
+import React, { Component } from 'react'
 import Taro from '@tarojs/taro'
 import { View, Text, Image, Block } from '@tarojs/components'
 import { AtLoadMore } from 'taro-ui'

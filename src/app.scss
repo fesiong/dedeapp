@@ -5,6 +5,9 @@ page{
   box-sizing: border-box;
   color: #333;
 }
+swan-template {
+  display: contents;
+}
 .container{
   background: $background;
 }

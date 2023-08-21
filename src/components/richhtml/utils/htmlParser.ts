@@ -1,9 +1,9 @@
 /**
- * 
+ *
  * htmlParser改造自: https://github.com/blowsie/Pure-JavaScript-HTML5-Parser
  *
  * github地址: https://github.com/icindy/wxParse
- * 
+ *
  * htmlParser 2次改造自wxParse 20181003
  */
 import xss from 'xss';
@@ -33,7 +33,8 @@ var fillAttrs = makeMap("checked,compact,declare,defer,disabled,ismap,multiple,n
 var special = makeMap("wxxxcode-style,script,style,view,scroll-view,block");
 
 function HTMLParser(html, handler) {
-	var index, chars, match, stack: any = {};
+	let index, chars, match: any  = {};
+  let stack: any[] = [];
 	//先过滤html
 	html = xss(html, {
 		whiteList: Object.assign({
@@ -150,7 +151,7 @@ function HTMLParser(html, handler) {
 			stack.push(tagName);
 
 		if (handler.start) {
-			var attrs = [];
+			let attrs: any = [];
 
 			rest.replace(attr, function (match, name) {
 				var value = arguments[2] ? arguments[2] :

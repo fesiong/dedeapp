@@ -1,14 +1,16 @@
-import Nerv, { Component } from 'nervjs'
+import { Component } from 'react'
 import Taro, { getApp } from '@tarojs/taro'
-import { View, Image, Block, Text } from '@tarojs/components'
-import { AtTag, AtLoadMore } from 'taro-ui'
+import { View, Image, Text } from '@tarojs/components'
+import { AtLoadMore } from 'taro-ui'
 import Container from '../../components/container'
 import RichHtml from '../../components/richhtml'
 import Product from '../../components/product'
 import Utils from '../../utils'
 import Api from '../../api'
 import './index.scss'
-const app = getApp()
+import utils from '../../utils'
+import { getCurrentInstance } from '@tarojs/runtime'
+
 export default class ProductPage extends Component {
 
   state = {
@@ -20,7 +22,8 @@ export default class ProductPage extends Component {
   id = 0
 
   componentWillMount() {
-    this.id = this.$router.params.id
+    let params: any = getCurrentInstance().router?.params;
+    this.id = params.id
   }
 
   componentDidMount() {
@@ -72,13 +75,13 @@ export default class ProductPage extends Component {
   }
 
   gotoCategory = (e) => {
-    app.navigate({
+    utils.navigate({
       url: '/pages/category/index?id=' + e
     })
   }
 
   gotoProduct = (e) => {
-    app.navigate({
+    utils.navigate({
       url: '/pages/product/index?id=' + e
     })
   }

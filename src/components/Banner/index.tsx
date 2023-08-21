@@ -1,4 +1,4 @@
-import Nerv, { Component } from 'nervjs'
+import React, { Component } from 'react'
 import Taro from '@tarojs/taro'
 import { View, Image, Swiper, SwiperItem } from '@tarojs/components'
 import './index.scss'
@@ -11,7 +11,7 @@ export default class Banner extends Component {
   static options = {
     addGlobalClass: true,
   }
-  
+
   gotoPosts = (e, m) => {
     if(!e){
       return
@@ -39,7 +39,7 @@ export default class Banner extends Component {
     const { list } = this.props
     return (
       <View>
-        {list.length && <Swiper
+        {list.length > 0 && <Swiper
           className='swiper'
           circular
           indicatorDots

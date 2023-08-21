@@ -1,7 +1,6 @@
-import Nerv, { Component } from 'nervjs'
+import { Component } from 'react'
 import Taro from '@tarojs/taro'
 import { View, Image, Block, Text } from '@tarojs/components'
-import { AtTabs } from 'taro-ui'
 import Container from '../../components/container'
 import Product from '../../components/product'
 import Article from '../../components/article'
@@ -60,7 +59,7 @@ export default class IndexPage extends Component {
         }
       }
     }
-    
+
     Api.index({
       tags: JSON.stringify(tags)
     }).then(res => {
@@ -174,20 +173,20 @@ export default class IndexPage extends Component {
           })
           }
         </View>
-        {showProduct && recommendProducts.length && <View className='panel'>
+        {(!!showProduct && recommendProducts.length > 0) && <View className='panel'>
           <View className='panel-title'><Text className='title-text'>推荐产品</Text></View>
           <View className='panel-content no-padding'>
             <Product products={recommendProducts} />
           </View>
         </View>}
-        {recommendArticles.length && <View className='panel'>
+        {recommendArticles.length > 0 && <View className='panel'>
           <View className='panel-title'><Text className='title-text'>热门文章</Text></View>
           <View className='panel-content no-padding'>
             <Article articles={recommendArticles} />
           </View>
         </View>}
-        {categories.length && <Block>
-          {categories.map((category, index) => {
+        {categories.length > 0 && <Block>
+          {categories.map((category: any) => {
             return <View className='panel' key={category.id}>
             <View className='panel-title'><Text className='title-text'>{category.title}</Text></View>
             <View className='panel-content no-padding'>
